@@ -6,10 +6,14 @@ const UsersList = (props) => {
     return (
         <Card className={styles.users}>
             <ul>
-                { props.users.map((user) => <li>{user.name} {user.age}</li>) }
+                { props.users.map((user) => (
+                    <li key={user.id}>
+                        User = {user.name} Age = {user.age}
+                    </li>
+                ))}
             </ul>
         </Card>
-    );
+    ); 
 }
 
 export default UsersList;

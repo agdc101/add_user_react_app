@@ -5,11 +5,11 @@ import styles from '../src/components/Users/AddUser.module.css';
 import UsersList from './components/Users/UsersList';
 
 function App() {
-  const [usersList, setUsersList] = useState(['']);
+  const [usersList, setUsersList] = useState([]);
 
   const addUser = (newName, newAge) => {
     setUsersList((prevUsersList) => {
-      return [...prevUsersList, { name: newName, age: newAge }]
+      return [...prevUsersList, { name: newName, age: newAge, id: Math.random().toString() }]
     });
   };
 
